@@ -17,7 +17,7 @@ const fetchContent = async (searchtext) => {
 router.get("/", (req, res) => {//user get request
     res.json({ success: "Hello db folder!" });
   });
-router.get("/*?", async (req, res) => {
+router.get("/*", async (req, res) => {
   const searchtext = req.params[0];
   if(searchtext.includes("authentication" || "account" || "accounts")){
     return res.json("NOT VALID")
